@@ -1,0 +1,8 @@
+Example= fibanocci series
+
+we can observe that there are lot of sub problems that are getting repeated.
+using normal recirsive solution, we get exponential time complexity
+using memoization, we can optimise it to linear time
+
+what is memo array?
+it is an array declared globally and all the values in the array are initialized as -1
