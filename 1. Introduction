@@ -1,0 +1,14 @@
+// in simple words dynamic programming is optimization over plain recursion
+// take inputs of sub problem and compute the main problem
+
+// the idea is to reuse the solution when there are overlapping subproblem
+1. memoization (top down)
+2. tabulation (bottom up)
+
+// Applications of dynamic programming algorithms
+
+1. Bellman form algorithm
+2. Floyd warhsall algorithm
+3. Diff utility(Longest Common Subsequence) - in Git to check what we removed and what we added
+4. Search closed words (Edit distance)
+5. Resource allocation (0-1 knapsack)
