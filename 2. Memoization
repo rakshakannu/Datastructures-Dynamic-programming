@@ -6,3 +6,46 @@ using memoization, we can optimise it to linear time
 
 what is memo array?
 it is an array declared globally and all the values in the array are initialized as -1
+
+while solving a DP problem, try to draw the recursive tree
+
+EXAMPLE:
+// find fibanocci series of a given number
+// normal recursive code
+
+int fib(int n)
+{
+  if(n==0||n==1)
+    return n;
+  
+  else
+    return fib(n-1)+fib(n-2);
+}
+
+// if we draw the recursion tree we will observe that there are lot of subtress that are repeating. 
+// IN dp, we are going to avoid these subtrees, we store the result somewhere and use it again while repeatition ocuurs.
+// actual time complexity is 2^n but when we use memoisation, we can reduce it to linear time which is O(n).
+// in the below code we are using memo array to store the result and use it whenever needed.
+// the size of the memo array can be initialized as n+1
+// we are using -1 for the memo array because -1 can never be the result of the nth fibanocci number
+
+int memo[n+1] = {-1,-1,-1.....};
+
+int fib(int n)
+{
+  if(memo[n]==-1)
+  {
+    if(n==0||n==1)
+      res = n;
+      
+    else
+      res = fib(n-1)+ fib(n-2);
+    memo[n]=res; // the value will be stored in the memo array.
+  }
+  return memo[n];
+}
+
+// if there are two parameters in the function call, we will have to create a 2D memo array instead of 1D.
+// size of the memo array is determined by the min and max value of the parameter.
+// the toughest part of DP is coming up with recursive solutions.
+// once we have found the recursive array, we can come up with memoisation easily.
