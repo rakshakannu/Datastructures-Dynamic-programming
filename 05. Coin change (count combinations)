@@ -1,0 +1,3 @@
+// we are given an array of coin types, and we are given a sum. we need to find all possible ways to find the sum using the given coins. each coin has an infinite supply.
+// this problem is similar to knapsack problem
+// we begin from the last item to make the implementaion easier
