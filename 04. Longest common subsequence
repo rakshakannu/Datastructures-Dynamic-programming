@@ -1,0 +1,6 @@
+// pick one or more characters from the string in the same order as they appear in the string, including null
+// there are 2^n possible subsequence
+// we need to find the longest common subsequence
+// empty string is always a common subsequnce of length 0
+
+(didnt understand solution)
