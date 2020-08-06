@@ -1,0 +1,28 @@
+// tabulation is a bottom up approach
+// we would have already computed values of fun(1), fun(2), fun(3) unlike the top down approach.
+// the rules to make the array and decide the size of the array is same
+
+ int fib(int n)
+ {
+  int f(n+1);  // this is a memo array being initialized
+  f(0)=0;
+  f(1)=1;
+  for(int i=0;i<n;i++)
+    f(i) = f(i-1)+f(i-2);
+  
+  return f(n);
+ }
+ 
+ time: O(n)
+ space: theta(n+1) = theta(n)
+ 
+ Side note: finding nth fibanocci number has a better solution
+ time: O(logn)
+ using the method of matrix multiplication and divide and conquer
+ 
+ // dynamic programming is just a name given to this process and it has got no significance
+ 
+ // memoisation VS tabulation
+ 
+ memoisation is very easy to implement once there is a recursion solution
+ tabulation is difficult to implement - this does not require recursion, so it is faster
